@@ -56,6 +56,14 @@ namespace ConsoleApp4
         {
             Console.WriteLine($"Book title: {title}, Pages: {pages}");
         }
+      static void PrintAllTitles( params string[] titles)
+        {
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
+
+        }
 
         static void Main(string[] args)
         {
@@ -136,6 +144,12 @@ namespace ConsoleApp4
             //Using the PrintBookInfo method from the question above, call it by naming the
              //parameters, passing pages before title.
             PrintBookInfo(pages: 900, title: "Clean Code");
+            #endregion
+            #region question 12
+            // Write a method PrintAllTitles(params string[] titles) that prints each title on its own line.
+            //Call it with three book titles.
+            PrintAllTitles("old book", "new book", "used book");
+           
             #endregion
         }
 
