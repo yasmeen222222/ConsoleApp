@@ -16,10 +16,14 @@ namespace ConsoleApp4
         {
             Console.WriteLine($"Book title: {title}");
         }
+        //question 5
+        static void AddBonusPages(int pages)
+        {
+            pages=pages+50;
+        }
 
 
-
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             #region question 1
             //Create a one - dimensional array double[] prices with the values 25.5, 40.0, 33.75.Print
@@ -44,6 +48,14 @@ namespace ConsoleApp4
             // "Clean Code".
             PrintBookTitle("Clean Code");
 
+            #endregion
+            #region question 5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?]
+            int pages = 400;
+            Console.WriteLine(pages);
+            AddBonusPages(pages);
+            Console.WriteLine( pages); // الاتنيين 400 عشان ده  passing by value value type
             #endregion
 
         }
