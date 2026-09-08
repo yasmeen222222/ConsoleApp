@@ -11,6 +11,11 @@ namespace ConsoleApp4
         {
             Console.WriteLine("Welcome to the Library!");
         }
+        //question 4
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine($"Book title: {title}");
+        }
 
 
 
@@ -33,6 +38,12 @@ namespace ConsoleApp4
             // Write a method called PrintWelcomeMessage that takes no parameters and prints
             //"Welcome to the Library!".Call it from Main.
             PrintWelcomeMessage();
+            #endregion
+            #region question 4
+            // Write a method Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with
+            // "Clean Code".
+            PrintBookTitle("Clean Code");
+
             #endregion
 
         }
