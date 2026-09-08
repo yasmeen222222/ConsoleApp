@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using System.Drawing;
+using System.Reflection.Metadata;
 using System.Security.Cryptography;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -21,8 +22,20 @@ namespace ConsoleApp4
         {
             pages=pages+50;
         }
-
-
+        //question 6
+       static void ApplyDiscount(double[] prices)
+        {
+            prices[0] = prices[0] - 5;  
+        }
+        //question 7
+       static void  AddBonusPagesByRef(ref int pages) { 
+            pages=pages+50;
+        }
+        //question 8
+         static void ReplaceArray(ref double[] prices)
+        {
+            double[] prices2 = { 10.0, 12.5, 15.0 };
+        }
         static void Main(string[] args)
         {
             #region question 1
@@ -57,7 +70,29 @@ namespace ConsoleApp4
             AddBonusPages(pages);
             Console.WriteLine( pages); // الاتنيين 400 عشان ده  passing by value value type
             #endregion
-
+            #region question 6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it
+            // with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why?
+            double[] prices = { 25.5, 40.0 };
+            Console.WriteLine(prices[0]);
+            ApplyDiscount(prices);
+            Console.WriteLine(prices[0]); // 20.5 عشان ده passing by value reference type
+            #endregion
+            #region question 7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
+            //Call it and print pages afterward. How is the result different from question 5 ?
+            Console.WriteLine(pages); // 400
+            AddBonusPagesByRef(ref pages);
+            Console.WriteLine(pages); //450 عشان ده passing by reference value type
+            #endregion
+            #region question 8
+            ///Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward.
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
+            #endregion
         }
 
 
