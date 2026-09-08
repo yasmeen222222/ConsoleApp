@@ -1,13 +1,19 @@
-﻿using System.Security.Cryptography;
+﻿using System.Reflection.Metadata;
+using System.Security.Cryptography;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ConsoleApp4
 {
     internal class Program
     {
+        //question 3
+        static void PrintWelcomeMessage()
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
 
-        
-        
+
+
             static void Main(string[] args)
         {
             #region question 1
@@ -22,6 +28,11 @@ namespace ConsoleApp4
             //int[,] shelfCopies = { { 3, 5 }, { 1, 4 } };
             //Console.WriteLine(shelfCopies[1, 0]);
 
+            #endregion
+            #region question 3
+            // Write a method called PrintWelcomeMessage that takes no parameters and prints
+            //"Welcome to the Library!".Call it from Main.
+            PrintWelcomeMessage();
             #endregion
 
         }
